@@ -1,0 +1,12 @@
+---
+
+ - name: first play
+   hosts: client1
+   become: true
+   tasks: 
+      - name: httpd install
+        ansible.builtin.yum: 
+          name: httpd
+          state: absent
+
+        
